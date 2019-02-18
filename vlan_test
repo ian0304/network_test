@@ -1,0 +1,26 @@
+---
+- name: Create Radiusadius Failed Vlan (enable mode commands)
+  gather_facts: false
+  connection: local
+
+  tasks:
+    - name: Create Radiusadius Failed Vlan
+      ios_config:
+        lines:
+          - vlan 52
+          - name Radius_Failed_Vlan
+
+      register: print_output
+
+    -  debug: var=print_output
+
+    - name: "SAVE CONFIGURATION"
+      register: save_config
+      ios_command:
+        commands:
+          - "write memory"
+
+      register: print_output
+
+    -  debug: var=print_output
+~  
