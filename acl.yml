@@ -6,9 +6,10 @@
 
   tasks:
     - name: Create Radiusadius Failed Vlan
-      ios_command:
-        commands:
+      ios_config:
+        lines:
           - access-list 1 permit any
+
     - name: "SAVE CONFIGURATION"
       register: save_config
       ios_command:
