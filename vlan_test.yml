@@ -2,8 +2,9 @@
 - name: Create Radiusadius Failed Vlan (enable mode commands)
   hosts: all
   gather_facts: false
-  connection: local
-
+  connection: network_cli
+  become: yes
+  
   tasks:
     - name: Create Radiusadius Failed Vlan
       ios_config:
