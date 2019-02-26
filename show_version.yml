@@ -8,7 +8,7 @@
     - name: Create Radiusadius Failed Vlan
       ios_config:
         lines:
-          - show version
+          - do show version
 
       register: print_output
 
