@@ -1,0 +1,25 @@
+---
+- name: Create Radiusadius Failed Vlan (enable mode commands)
+  hosts: "{{ cisco_router }}"
+  connection: network_cli
+  gather_facts: no
+
+  tasks:
+    - name: Create Radiusadius Failed Vlan
+      ios_config:
+        lines:
+          - show version
+
+      register: print_output
+
+    -  debug: var=print_output
+
+    - name: "SAVE CONFIGURATION"
+      register: save_config
+      ios_command:
+        commands:
+          - "write memory"
+
+      register: print_output
+
+    -  debug: var=print_output
