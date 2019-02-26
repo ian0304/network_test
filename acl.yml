@@ -9,7 +9,6 @@
       ios_command:
         commands:
           - access-list 1 permit any
-
     - name: "SAVE CONFIGURATION"
       register: save_config
       ios_command:
