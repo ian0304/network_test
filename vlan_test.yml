@@ -1,6 +1,6 @@
 ---
 - name: Create Radiusadius Failed Vlan (enable mode commands)
-  hostname {{ inventory_hostname }}
+  hosts: all
   gather_facts: false
   connection: network_cli
   become: yes
