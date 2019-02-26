@@ -10,17 +10,8 @@
         lines:
           - vlan 52
           - name Radius_Failed_Vlan
+        backup: yes
 
-      register: print_output
-
-    -  debug: var=print_output
-
-    - name: "SAVE CONFIGURATION"
-      register: save_config
-      ios_command:
-        commands:
-          - "write memory"
-
-      register: print_output
-
-    -  debug: var=print_output
+    - name: Save running to startup when modified
+      ios_config:
+        save_when: modified
