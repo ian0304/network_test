@@ -1,5 +1,6 @@
 ---
 - name: Create Radiusadius Failed Vlan (enable mode commands)
+  hosts: all
   gather_facts: false
   connection: local
 
