@@ -2,7 +2,7 @@
 - name: Create Radiusadius Failed Vlan (enable mode commands)
   ios_config:
     lines:
-	  - vlan 52
+      - vlan 52
       - name Radius_Failed_Vlan
     backup: yes
 
