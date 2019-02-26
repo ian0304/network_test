@@ -6,8 +6,8 @@
 
   tasks:
     - name: Create Radiusadius Failed Vlan
-      ios_config:
-        lines:
+      ios_command:
+        commands:
           - vlan 52
           - name Radius_Failed_Vlan
 
