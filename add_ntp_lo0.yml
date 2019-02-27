@@ -18,11 +18,12 @@
         commands:
           - "write memory"
      
-    - name: Sending an e-mail using Legacy SSL to the remote machine
+    - name: send mail
       mail:
-        host: localhost
-        port: 25
-        to: IT Shanghai <itsh@51talk.com>
-        subject: Ansible-report
-        body: System {{ cisco_router }} has been successfully provisioned.
-        secure: always
+       host: mail.51talk.com
+       port: 25
+       sender: nmsalert@51talk.com
+       to: ITSH <itsh@51talk>
+       subject: Report for { { ansible_hostname } }
+       body: 'Server { { ansible_hostname } } has bene updated'
+      delegate_to: localhost
