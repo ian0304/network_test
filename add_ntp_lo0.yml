@@ -18,13 +18,14 @@
         commands:
           - "write memory"
      
-    - name: send mail
+    - name: Sending an e-mail using 51talk SMTP servers
       mail:
-       host: 127.0.0.1
-       port: 25
-       secure: never
-       sender: nmsalert@51talk.com
-       to: ITSH <itsh@51talk>
-       subject: Report for {{ cisco_router }}
-       body: 'Server {{ cisco_router }} has bene updated'
+        host: smtp.51talk.com
+        port: 587
+        username: {{ mail_user }}
+        password: {{ mail_password }}
+        to: ITSH <itsh@51talk.com>
+        subject: Ansible-report
+        body: Router {{ cisco_router }} has been successfully provisioned.
       delegate_to: localhost
+
