@@ -22,6 +22,7 @@
       mail:
        host: 127.0.0.1
        port: 25
+       secure: never
        sender: nmsalert@51talk.com
        to: ITSH <itsh@51talk>
        subject: Report for {{ cisco_router }}
