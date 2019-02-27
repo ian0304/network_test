@@ -37,3 +37,4 @@
         subject: Ansible-report
         body: Router has been successfully provisioned.
       delegate_to: localhost
+      run_once: yes
