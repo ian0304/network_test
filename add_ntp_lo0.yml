@@ -26,6 +26,6 @@
         password: "{{ mail_password }}"
         to: ITSH <"{{ mail_to }}">
         subject: Ansible-report
-        body: Router "{{ cisco_router }}" has been successfully provisioned.
+        body: Router has been successfully provisioned.
       delegate_to: localhost
 
