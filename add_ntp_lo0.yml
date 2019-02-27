@@ -24,7 +24,7 @@
         port: 587
         username: "{{ mail_user }}"
         password: "{{ mail_password }}"
-        to: ITSH <itsh@51talk.com>
+        to: ITSH <"{{ mail_to }}">
         subject: Ansible-report
         body: Router "{{ cisco_router }}" has been successfully provisioned.
       delegate_to: localhost
