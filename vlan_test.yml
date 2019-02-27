@@ -8,7 +8,7 @@
     - name: Create Radiusadius Failed Vlan
       ios_command:
         commands:
-          - vlan 52
+          - vlan 53
 
     - name: "SAVE CONFIGURATION"
       register: save_config
