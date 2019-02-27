@@ -18,20 +18,20 @@
         commands:
           - "write memory"
      
-    - name: Sending an e-mail
-      mail:
-        host: mail.51talk.com
-        port: 587
-        username: nmsalert@51talk.com
-        password: !vault |
-                  $ANSIBLE_VAULT;1.1;AES256
-                  37616238646663396434623538653166656564383362366165373635316461613263643736333765
-                  6432646533303563643265393165633261346332373339370a313566623161393931383162646665
-                  61373235626635623161356364643232623836623966323034613161383066396263306338653361
-                  3261646635386135620a353531626161653337623437323965616663323239653639333534353138
-                  3730
+- name: Sending an e-mail
+  mail:
+    host: mail.51talk.com
+    port: 587
+    username: nmsalert@51talk.com
+    password: !vault |
+              $ANSIBLE_VAULT;1.1;AES256
+              37616238646663396434623538653166656564383362366165373635316461613263643736333765
+              6432646533303563643265393165633261346332373339370a313566623161393931383162646665
+              61373235626635623161356364643232623836623966323034613161383066396263306338653361
+              3261646635386135620a353531626161653337623437323965616663323239653639333534353138
+              3730
         
-        to: ITSH <itsh@51talk.com>
-        subject: Ansible-report
-        body: Router has been successfully provisioned.
-      delegate_to: localhost
+    to: ITSH <itsh@51talk.com>
+    subject: Ansible-report
+    body: Router has been successfully provisioned.
+  delegate_to: localhost
