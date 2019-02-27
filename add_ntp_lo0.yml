@@ -17,15 +17,3 @@
       ios_command:
         commands:
           - "write memory"
-     
-    - name: Sending an e-mail using 51talk SMTP servers
-      mail:
-        host: "{{ mail_server }}"
-        port: 587
-        username: "{{ mail_user }}"
-        password: "{{ mail_password }}"
-        to: ITSH <"{{ mail_to }}">
-        subject: Ansible-report
-        body: Router has been successfully provisioned.
-      delegate_to: localhost
-
