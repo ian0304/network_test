@@ -31,6 +31,6 @@
         
         to: ITSH <itsh@51talk.com>
         subject: Ansible-report
-        body: Router has been successfully provisioned.
+        body: Router"{{ cisco_router }}" has been successfully provisioned.
       delegate_to: localhost
       run_once: yes
