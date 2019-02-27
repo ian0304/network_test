@@ -20,7 +20,7 @@
      
     - name: Sending an e-mail using 51talk SMTP servers
       mail:
-        host: smtp.51talk.com
+        host: "{{ mail_server }}"
         port: 587
         username: "{{ mail_user }}"
         password: "{{ mail_password }}"
