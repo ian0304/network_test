@@ -22,7 +22,7 @@
       mail:
         host: mail.51talk.com
         port: 587
-        username: nmsalert@51talk.com
+        username: nmsalert
         password: !vault |
                   $ANSIBLE_VAULT;1.1;AES256
                   37616238646663396434623538653166656564383362366165373635316461613263643736333765
