@@ -17,3 +17,17 @@
       ios_command:
         commands:
           - "write memory"
+     
+    - name: Send Email with Report
+      mail:
+        host: smtp.gmail.com
+        port: 465
+        username: "{{ gmail_account }}"
+        password: "{{ gmail_account_password }}"
+        to: Anthony Lin <anthony.lin.test@gmail.com>
+        subject: "Ansible Report"
+        body: "The consolidated report for the Cisco IOS Routers can be found in the attached file"
+        attach:
+         - reports/Consolidated_Cisco_IOS_Report.html
+      delegate_to: localhost
+      run_once: yes
