@@ -2,8 +2,8 @@
 ---
 - name: Sending an e-mail using 51talk SMTP servers
   mail:
-    host: mail.51talk.com
-    port: 587
+    host: localhost
+    port: 25
     username: nmsalert@51talk.com
     password: !vault |
               $ANSIBLE_VAULT;1.1;AES256
