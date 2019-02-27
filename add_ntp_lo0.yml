@@ -20,10 +20,10 @@
      
     - name: send mail
       mail:
-       host: mail.51talk.com
+       host: localhost
        port: 25
        sender: nmsalert@51talk.com
        to: ITSH <itsh@51talk>
-       subject: Report for { { ansible_hostname } }
-       body: 'Server { { ansible_hostname } } has bene updated'
+       subject: Report for {{ cisco_router }}
+       body: 'Server {{ cisco_router }} has bene updated'
       delegate_to: localhost
