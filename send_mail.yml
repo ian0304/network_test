@@ -20,11 +20,12 @@
      
     - name: Sending an e-mail using 51talk SMTP servers
       mail:
-        host: "{{ mail_server }}"
+        host: mail.51talk.com
         port: 587
-        username: "{{ mail_user }}"
-        password: "{{ mail_password }}"
-        to: ITSH <"{{ mail_to }}">
+        username: nmsalert@51talk.com
+        password: 
+        
+        to: ITSH <itsh@51talk.com>
         subject: Ansible-report
         body: Router has been successfully provisioned.
       delegate_to: localhost
