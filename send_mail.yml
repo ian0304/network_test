@@ -18,8 +18,7 @@
         commands:
           - "write memory"
      
-- name: Sending an e-mail
-  hosts: localhost
+
   tasks:
     - name: EMAIL
       mail:
