@@ -18,7 +18,7 @@
         commands:
           - "write memory"
      
-    - name: Sending an e-mail using 51talk SMTP servers
+    - name: Sending an e-mail
       mail:
         host: mail.51talk.com
         port: 587
