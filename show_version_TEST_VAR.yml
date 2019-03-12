@@ -1,11 +1,11 @@
 ---
-- name: Create Radiusadius Failed Vlan (enable mode commands)
+- name: SHOW VERSION
   hosts: "{{ cisco_router }}"
   connection: network_cli
   gather_facts: no
 
   tasks:
-    - name: Create Radiusadius Failed Vlan
+    - name: SHOW VERSION
       ios_command:
         commands:
           - "show version"
